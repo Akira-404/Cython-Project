@@ -30,6 +30,7 @@ def cpu_nms(dets, thresh):
         ix2 = x2[i]
         iy2 = y2[i]
         iarea = areas[i]
+
         for _j in range(_i + 1, ndets):
             j = order[_j]
             if suppressed[j] == 1:
