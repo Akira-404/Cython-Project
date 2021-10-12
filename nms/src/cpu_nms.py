@@ -46,3 +46,6 @@ def cpu_nms(dets, thresh):
             if ovr >= thresh:
                 suppressed[j] = 1
     return keep
+
+if __name__ == '__main__':
+    ...

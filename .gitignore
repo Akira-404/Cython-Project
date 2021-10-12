@@ -12,3 +12,17 @@ utils/build/temp.linux-x86_64-3.7/nms/gpu_nms.o
 utils/build/temp.linux-x86_64-3.7/nms/nms_kernel.o
 utils/nms/cpu_nms.cpython-37m-x86_64-linux-gnu.so
 utils/nms/gpu_nms.cpython-37m-x86_64-linux-gnu.so
+
+nms/__pycache__/
+
+nms/build/temp.linux-x86_64-3.7/nms/cpu_nms.o
+nms/build/temp.linux-x86_64-3.7/nms/gpu_nms.o
+nms/build/temp.linux-x86_64-3.7/nms/nms_kernel.o
+
+utils/nms/__pycache__/
+
+nms/src/cpu_nms.cpython-37m-x86_64-linux-gnu.so
+nms/src/gpu_nms.cpython-37m-x86_64-linux-gnu.so
+
+nms/src/__pycache__/
+
