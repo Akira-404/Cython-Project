@@ -33,3 +33,4 @@ nms/src/cpu_nms_pyx/build/
 
 nms/src/cpu_nms_pyx/cpu_nms.c
 nms/src/cpu_nms_pyx/cpu_soft_nms.c
+tree.txt
