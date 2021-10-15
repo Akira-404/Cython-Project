@@ -28,8 +28,8 @@ nms/src/__pycache__/
 
 
 .vscode/c_cpp_properties.json
-nms/src/pyx/build/
+nms/src/cpu_nms_pyx/build/
 *.so
 
-nms/src/pyx/cpu_nms.c
-nms/src/pyx/cpu_soft_nms.c
+nms/src/cpu_nms_pyx/cpu_nms.c
+nms/src/cpu_nms_pyx/cpu_soft_nms.c
