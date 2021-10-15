@@ -12,6 +12,8 @@ import time
 
 def init_canvas(width: int, height: int, color: tuple = (0, 0, 0)) -> np.ndarray:
     """
+    docs:
+        return a empty canvas of color.
     :param width: image width
     :param height: image height
     :param color: canvas color
@@ -22,12 +24,15 @@ def init_canvas(width: int, height: int, color: tuple = (0, 0, 0)) -> np.ndarray
     return canvas
 
 
-def py_cpu_nms(dets: np.ndarray, thresh: float):
-    """Pure Python NMS baseline."""
-    '''
-    dets shape:[classes_numx5],5:[x1,y1,x2,y2,score]
-    
-    '''
+def py_cpu_nms(dets: np.ndarray, thresh: float) -> list:
+    """
+    docs:
+        Pure Python NMS baseline
+    :param dets:dets shape:[classes_numx5] eg:[[x1,y1,x2,y2,score],...]
+    :param thresh:
+    :return:
+    """
+
     x1 = dets[:, 0]
     y1 = dets[:, 1]
     x2 = dets[:, 2]
@@ -35,7 +40,7 @@ def py_cpu_nms(dets: np.ndarray, thresh: float):
     scores = dets[:, 4]
 
     areas = (x2 - x1 + 1) * (y2 - y1 + 1)
-    order = scores.argsort()[::-1]
+    order = scores.argsort()[::-1]  # area从大到小排序，获取下标
 
     keep = []
     while order.size > 0:
@@ -69,20 +74,12 @@ if __name__ == '__main__':
     boxes = np.concatenate((minxy, maxxy, score), axis=1).astype(np.float32)
     print(f'boxes shape:{boxes.shape}')
 
-    # test data
-    # boxes = np.array([[100, 100, 210, 210, 0.72],
-    #                   [250, 250, 420, 420, 0.8],
-    #                   [220, 220, 320, 330, 0.92],
-    #                   [100, 100, 210, 210, 0.72],
-    #                   [230, 240, 325, 330, 0.81],
-    #                   [220, 230, 315, 340, 0.9]])
-
     img1 = copy.deepcopy(canvas)
     for item in boxes:
         x1, y1, x2, y2, score = item
         cv2.rectangle(img1, (int(x1), int(y1)), (int(x2), int(y2)), (0, 0, 255), 1)
         # cv2.putText(img1, str(score), (int(x1), int(y1)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
-    cv2.imwrite('cpu_nms_result_1.jpg', img1)
+    cv2.imwrite('imgs/cpu_nms_result_1.jpg', img1)
 
     t1 = time.time()
     keep = py_cpu_nms(boxes, 0.3)
@@ -96,5 +93,5 @@ if __name__ == '__main__':
         # cv2.putText(img2, str(score), (int(x1), int(y1)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
     cv2.imshow('img1', img1)
     cv2.imshow('img2', img2)
-    cv2.imwrite('cpu_nms_result_2.jpg', img2)
+    cv2.imwrite('imgs/cpu_nms_result_2.jpg', img2)
     cv2.waitKey(0)

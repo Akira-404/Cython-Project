@@ -26,3 +26,5 @@ nms/src/gpu_nms.cpython-37m-x86_64-linux-gnu.so
 
 nms/src/__pycache__/
 
+
+.vscode/c_cpp_properties.json
