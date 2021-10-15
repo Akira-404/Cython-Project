@@ -24,20 +24,20 @@ def init_canvas(width: int, height: int, color: tuple = (0, 0, 0)) -> np.ndarray
     return canvas
 
 
-def py_cpu_nms(dets: np.ndarray, thresh: float) -> list:
+def py_cpu_nms(boxes: np.ndarray, thresh: float) -> list:
     """
     docs:
         Pure Python NMS baseline
-    :param dets:dets shape:[classes_numx5] eg:[[x1,y1,x2,y2,score],...]
+    :param boxes:boxes shape:[classes_numx5] eg:[[x1,y1,x2,y2,score],...]
     :param thresh:
     :return:
     """
 
-    x1 = dets[:, 0]
-    y1 = dets[:, 1]
-    x2 = dets[:, 2]
-    y2 = dets[:, 3]
-    scores = dets[:, 4]
+    x1 = boxes[:, 0]
+    y1 = boxes[:, 1]
+    x2 = boxes[:, 2]
+    y2 = boxes[:, 3]
+    scores = boxes[:, 4]
 
     areas = (x2 - x1 + 1) * (y2 - y1 + 1)
     order = scores.argsort()[::-1]  # scores从大到小排序，获取下标
