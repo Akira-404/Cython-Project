@@ -2,6 +2,8 @@ import numpy as np
 import cv2
 import copy
 import time
+
+
 def init_canvas(width: int, height: int, color: tuple = (0, 0, 0)) -> np.ndarray:
     """
     :param width: image width
@@ -47,6 +49,7 @@ def py_cpu_nms(dets: np.ndarray, thresh: float):
         order = order[inds + 1]
 
     return keep
+
 
 if __name__ == '__main__':
     canvas = init_canvas(800, 600)

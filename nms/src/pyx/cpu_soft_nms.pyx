@@ -1,11 +1,12 @@
 import numpy as np
 cimport numpy as np
 
-cdef inline np.float32_t max(np.float32_t a,np.float32_t b):
-    return a if a>=b else b
 
-cdef inline np.float32_t min(np.float32_t,a np.float32_t b):
-    return a if a<=b else b
+cdef inline np.float32_t max(np.float32_t a, np.float32_t b):
+    return a if a >= b else b
+
+cdef inline np.float32_t min(np.float32_t a, np.float32_t b):
+    return a if a <= b else b
 
 def cpu_soft_nms(np.ndarray[float, ndim=2] boxes, float sigma=0.5, float Nt=0.3, float threshold=0.001, unsigned int method=0):
     cdef unsigned int N = boxes.shape[0]

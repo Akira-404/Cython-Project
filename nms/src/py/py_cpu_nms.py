@@ -40,9 +40,9 @@ def py_cpu_nms(dets: np.ndarray, thresh: float) -> list:
     scores = dets[:, 4]
 
     areas = (x2 - x1 + 1) * (y2 - y1 + 1)
-    order = scores.argsort()[::-1]  # area从大到小排序，获取下标
+    order = scores.argsort()[::-1]  # scores从大到小排序，获取下标
 
-    keep = []
+    keep = []  # 保持需要留下的box index
     while order.size > 0:
         i = order[0]
         keep.append(i)
@@ -54,10 +54,10 @@ def py_cpu_nms(dets: np.ndarray, thresh: float) -> list:
         w = np.maximum(0.0, xx2 - xx1 + 1)
         h = np.maximum(0.0, yy2 - yy1 + 1)
         inter = w * h
-        ovr = inter / (areas[i] + areas[order[1:]] - inter)
+        iou = inter / (areas[i] + areas[order[1:]] - inter)
 
-        inds = np.where(ovr <= thresh)[0]
-        order = order[inds + 1]
+        inds = np.where(iou <= thresh)[0]
+        order = order[inds + 1]  # next one
 
     return keep
 
