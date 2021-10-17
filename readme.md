@@ -80,7 +80,7 @@ fibonacci
 
 2.`fibonacci/demo1/setpu.py`
 
-​	编译
+​	编译文件
 
 3.`fibonacci/demo2/cfib.h cfib.c`
 
@@ -92,7 +92,7 @@ fibonacci
 
 5.`fibonacci/demo2/setpu.py`
 
-​	编译
+​	编译文件
 
 6.`fibonacci/test.py`
 
@@ -105,4 +105,48 @@ fibonacci
 ------
 
 ## Primes 求解质数
+
+### 文件目录
+
+```bash
+primes
+├── primes.c
+├── pyx_primes.pyx
+├── py_primes.py
+├── pyx_primes.cp36-win_amd64.pyd(so)
+├── setup.py
+├── test.py
+└── tree.txt
+```
+
+
+
+### 文件说明
+
+1.`primes.c`
+
+编译生成的C文件
+
+2.`primes.pyx`
+
+基于Cython实现的质数文件
+
+3.`py_primes.py`
+
+基于Python实现的质数文件
+
+4.`setup.py`
+
+编译文件
+
+5.`test.py`
+
+测试文件
+
+### 结果对比
+
+```bash
+py_ret time:0.00899958610534668
+pyx_ret time:0.0019981861114501953
+```
 
