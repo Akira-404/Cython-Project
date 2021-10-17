@@ -102,6 +102,48 @@ fibonacci
 
 ## NMS非极大值抑制算法
 
+**还在测试**
+
+### 文件目录
+
+```
+nms
+├── docs
+│   └── nms.png
+├── src
+│   ├── cpu_nms_py
+│   │   ├── __init__.py
+│   │   ├── imgs
+│   │   │   ├── cpu_nms_result_1.jpg
+│   │   │   ├── cpu_nms_result_2.jpg
+│   │   │   ├── cpu_soft_nms_result_1.jpg
+│   │   │   └── cpu_soft_nms_result_2.jpg
+│   │   ├── py_cpu_nms.py
+│   │   └── py_cpu_soft_nms.py
+│   ├── cpu_nms_pyx
+│   │   ├── MakeFile
+│   │   ├── cpu_nms.pyx
+│   │   ├── cpu_soft_nms.pyx
+│   │   └── setup.py
+│   └── gpu_nms_pyx
+│       ├── MakeFile
+│       ├── gpu_nms.cpp
+│       ├── gpu_nms.hpp
+│       ├── gpu_nms.pyx
+│       ├── nms_kernel.cu
+│       └── setpu.py
+├── tree.txt
+└── utils
+    ├── __init__.py
+    ├── bbox.pyx
+    ├── blob.py
+    └── timer.py
+```
+
+
+
+### 文件说明
+
 ------
 
 ## Primes 求解质数
