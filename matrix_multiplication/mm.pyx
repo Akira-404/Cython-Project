@@ -22,5 +22,5 @@ cdef np.ndarray[np.float32_t,ndim=2] _naive_dot(np.ndarray[np.float32_t,ndim=2] 
                 c[i,j]=s
     return c
 
-def naive_dot(a,b):
+def pyx_naive_dot(a,b):
     return _naive_dot(a,b)

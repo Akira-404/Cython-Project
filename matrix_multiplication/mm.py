@@ -1,9 +1,9 @@
 import numpy as np
-from numpy.lib.twodim_base import mask_indices
+import time
 
 
 # [n,p]*[p,m]=[n,m]
-def naive_dot(a: np.ndarray, b: np.ndarray):
+def py_naive_dot(a: np.ndarray, b: np.ndarray):
     if a.shape[1] != b.shape[0]:
         raise ValueError('shape no matched')
 
@@ -16,8 +16,13 @@ def naive_dot(a: np.ndarray, b: np.ndarray):
                 s += a[i, k] * b[k, j]
             c[i, j] = s
     return c
-if __name__=='__main__':
-    a=np.random.randn(100,200).astype(np.float32)
-    b=np.random.randn(200,500).astype(np.float32)
-    ret=naive_dot(a,b)
+
+
+if __name__ == '__main__':
+    a = np.random.randn(100, 200).astype(np.float32)
+    b = np.random.randn(200, 500).astype(np.float32)
+    t1 = time.time()
+    ret = py_naive_dot(a, b)
+    t2 = time.time()
     print(f'ret:{ret}')
+    print(f'time:{t2 - t1} sec')

@@ -1,12 +1,12 @@
 
 .idea/
 
-dot/__pycache__/
+matrix_multiplication/__pycache__/
 
 utils/__pycache__/
 
-dot/dot_cython.cpython-37m-x86_64-linux-gnu.so
-dot/build/temp.linux-x86_64-3.7/dot_cython.o
+matrix_multiplication/dot_cython.cpython-37m-x86_64-linux-gnu.so
+matrix_multiplication/build/temp.linux-x86_64-3.7/dot_cython.o
 utils/build/temp.linux-x86_64-3.7/nms/cpu_nms.o
 utils/build/temp.linux-x86_64-3.7/nms/gpu_nms.o
 utils/build/temp.linux-x86_64-3.7/nms/nms_kernel.o
@@ -41,3 +41,5 @@ fibonacci/build/
 fibonacci/demo1/build/
 
 fibonacci/demo2/build/
+
+matrix_multiplication/build/
