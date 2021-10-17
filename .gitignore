@@ -43,3 +43,7 @@ fibonacci/demo1/build/
 fibonacci/demo2/build/
 
 matrix_multiplication/build/
+
+primes/__pycache__/
+
+primes/build/

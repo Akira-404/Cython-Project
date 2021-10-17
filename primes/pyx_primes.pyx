@@ -1,4 +1,8 @@
-def primes(int kmax):
+cimport cython
+
+@cython.boundscheck(False)
+@cython.wraparound(False)
+cdef _primes(int kmax):
     cdef int n, k, i
     cdef int p[1000]
     result = []
@@ -16,3 +20,7 @@ def primes(int kmax):
             result.append(n)
         n = n + 1
     return result
+
+def pyx_primes(kmax):
+    return _primes(kmax)
+
