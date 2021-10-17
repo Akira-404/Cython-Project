@@ -1,10 +1,10 @@
-# 一系列关于Cython 运算的Demo实例
+# 一系列基于Cython 的Demo实例
 
-## 目录
+## Matrix Multiplication矩阵乘法运算
 
-## 矩阵乘法运算
+------
 
-## fibonacci 斐波那契数列计算
+## Fibonacci 斐波那契数列计算
 
 ### 文件目录
 
@@ -28,19 +28,37 @@ fibonacci
 └── tree.txt
 ```
 
-fibonacci/demo1/fibpyx:pyx实现fibonacci数列计算
+### 文件说明
 
-fibonacci/demo1/setpu.py:编译
+1.`fibonacci/demo1/fib.pyx`
 
-fibonacci/demo2/cfib.h cfib.c:C语言实现的fibonacci计算
+​	pyx实现fibonacci数列计算
 
-fibonacci/demo2/wrapper_cfib.pyx:pyx调用c语言function
+2.`fibonacci/demo1/setpu.py`
 
-fibonacci/demo2/setpu.py:编译
+​	编译
 
-fibonacci/test.py
+3.`fibonacci/demo2/cfib.h cfib.c`
 
-## nms 非极大值抑制算法
+​	C语言实现的fibonacci计算
 
-## primes 求解质数
+4.`fibonacci/demo2/wrapper_cfib.pyx`
+
+​	pyx调用c语言function
+
+5.`fibonacci/demo2/setpu.py`
+
+​	编译
+
+6.`fibonacci/test.py`
+
+​	测试文件
+
+------
+
+## NMS非极大值抑制算法
+
+------
+
+## Primes 求解质数
 
