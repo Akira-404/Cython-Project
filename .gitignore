@@ -30,7 +30,14 @@ nms/src/__pycache__/
 .vscode/c_cpp_properties.json
 nms/src/cpu_nms_pyx/build/
 *.so
+*.pyd
 
 nms/src/cpu_nms_pyx/cpu_nms.c
 nms/src/cpu_nms_pyx/cpu_soft_nms.c
 tree.txt
+
+fibonacci/build/
+
+fibonacci/demo1/build/
+
+fibonacci/demo2/build/
