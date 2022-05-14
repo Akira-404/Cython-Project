@@ -1,36 +1,18 @@
+*.o
+*.so
+*.pyd
 
 .idea/
 
 matrix_multiplication/__pycache__/
-
 utils/__pycache__/
-
-matrix_multiplication/dot_cython.cpython-37m-x86_64-linux-gnu.so
-matrix_multiplication/build/temp.linux-x86_64-3.7/dot_cython.o
-utils/build/temp.linux-x86_64-3.7/nms/cpu_nms.o
-utils/build/temp.linux-x86_64-3.7/nms/gpu_nms.o
-utils/build/temp.linux-x86_64-3.7/nms/nms_kernel.o
-utils/nms/cpu_nms.cpython-37m-x86_64-linux-gnu.so
-utils/nms/gpu_nms.cpython-37m-x86_64-linux-gnu.so
-
 nms/__pycache__/
-
-nms/build/temp.linux-x86_64-3.7/nms/cpu_nms.o
-nms/build/temp.linux-x86_64-3.7/nms/gpu_nms.o
-nms/build/temp.linux-x86_64-3.7/nms/nms_kernel.o
-
 utils/nms/__pycache__/
-
-nms/src/cpu_nms.cpython-37m-x86_64-linux-gnu.so
-nms/src/gpu_nms.cpython-37m-x86_64-linux-gnu.so
-
 nms/src/__pycache__/
-
 
 .vscode/c_cpp_properties.json
 nms/src/cpu_nms_pyx/build/
-*.so
-*.pyd
+
 
 nms/src/cpu_nms_pyx/cpu_nms.c
 nms/src/cpu_nms_pyx/cpu_soft_nms.c
@@ -47,3 +29,7 @@ matrix_multiplication/build/
 primes/__pycache__/
 
 primes/build/
+/nms/build/
+/nms/cpu_nms.c
+/nms/gpu_nms.cpp
+/my_nms/
